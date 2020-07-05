@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    background: #F5F5F6;
+    color: #003D33;
+    margin: 0;
+    padding: 0;    
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+a {
+    color: #00695C;
+    text-decoration: underline;
+}
+
+body.loading {
+    color: #fff;
+    background: #00695C;
+    padding: 10%;
+}
+
+    body.loading .brand {
+        text-align: center;
+        color: #fff;
+    }
+
+    body.loading .logo {
+        margin: 0 auto;
+        width: 6rem;
+        height: 6rem;
+        font-size: 3rem;
+    }
+    
+    body.loading .logo.loaded {
+        color: #003D33;
+        background: #fff;
+        transition: 1s;
+    }
+    
+    body.loading .logo [class^="icon-"], [class*=" icon-"] {
+        margin-top: 1.5rem;
+    }
+
+    body.loading .brand h1 {
+        font-size: 3rem;
+    }
+    
+[class^="icon-"], [class*=" icon-"] {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+.logo {
+    border: 0.2rem solid #fff;
+    border-radius: 100%;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: #00695C;
+    background: #fff;   
+    box-shadow: 0 3px 6px 0px rgba(0,0,0,0.15);
+    border: 0;
+    height: 3rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:hover,
+.button:active {
+    background: #F5F5F6;
+    transition: 0.3s;
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem #C1C2C1;
+}
+
+.button.button--link {
+    background: transparent;
+    box-shadow: none;
+}
+
+.button.button--primary {
+    color: #fff;
+    background: #00695C;
+}
+
+.button.button--primary:hover,
+.button.button--primary:active {
+    background: #003D33;
+}
+
+.button.button--primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem #003D33;
+}
+
+.button.button-floating {
+    border-radius: 100%;
+    width: 3.6rem;
+    height: 3.6rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    font-size: 2.6rem;
+}
+
+.form input, 
+.form select {
+    display: block;
+    width: 100%;
+    color: #00695C;
+    background: #fff;   
+    box-shadow: 0 3px 6px 0px rgba(0,0,0,0.15);
+    border: 0;
+    height: 3rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    margin: 0 0 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid #fff;
+}
+
+
+.form input:focus, 
+.form select:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem #439889;
+}
+
+.form .input {
+    margin: 0 0 1rem;
+    width: 100%;
+} 
+
+.form .input.input--split {
+    display: table;
+}
+
+.form .input input, 
+.form .input select {
+    margin: 0;
+}
+
+.form .input.input--split input,
+.form .input.input--split select{
+    float:left;
+    display: table-cell;
+    width: calc(50% - 0.5rem);
+}
+
+.form .input.input--split *:last-child {
+    float: right;
+}
+
+.form .actions {
+    width: 100%;
+}
+
+.form .actions.actions--split .button {
+    float:left;
+    display: table-cell;
+    width: calc(50% - 0.5rem);
+}
+
+.form .actions.actions--split .button:last-child {
+    float: right;
+}
+
+header {
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+    background: #00695C;
+}
+
+header .button {
+    color: #fff;
+    font-size: 2rem;
+    background: transparent;
+    box-shadow: none;    
+    padding: 0;
+}
+
+header .button:hover,
+header .button:active {
+    background: transparent;
+}
+
+header .button.button--up{
+    float: left;
+    margin-right: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+section {
+    width: 100%;
+    padding: 1rem;
+}
+
+article {
+    cursor: pointer;
+    margin: 0 0 1rem 0;
+    padding: 0 1rem;
+    background: #fff;
+    border-radius: 0.3rem;
+    position: relative;
+    box-shadow: 0 3px 6px 0px rgba(0,0,0,0.15);
+    height: 3rem;
+    line-height: 3rem;
+    user-select: none;
+}
+
+article.finished {
+    text-decoration: line-through;
+}
+
+article .actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+article:hover,
+article:active {
+    box-shadow: none;
+}
+
+article .title {
+    margin: 0 0 0 0.3rem;
+}

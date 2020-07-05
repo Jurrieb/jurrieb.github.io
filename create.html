@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lists</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./assets/css/lists.css"/>
+    </head>
+    <body>
+        <header>
+            <a class="button button--up" href="lists.html">
+                <svg shape-rendering="geometricPrecision" class="icon-back">
+                    <use href="#icon-back"></use>
+                </svg>
+            </a>
+            <h1>New list item</h1>
+        </header>
+        <section>
+            <form class="form" method="post" data-submit="ajax" action="lists.html">
+                <input required="required" name="title" type="text" placeholder="List item name">
+                <div class="input input--split">
+                    <input name="quantity" type="number" value="1">
+                    <select name="unit">
+                        <option value="x">Select an unit</option>
+                        <option value="gr.">Gram</option>
+                        <option value="kg.">Kilo</option>
+                        <option value="L.">Liters</option>
+                    </select>
+                </div>
+                <div class="actions actions--split">
+                    <button type="submit" class="button button--primary">Submit</button>
+                    <a href="lists.html" class="button">Cancel</a>
+                </div>
+            </form>
+        </section>
+        <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <svg id="icon-back" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>        
+                </svg>  
+            </defs>
+        </svg>
+        <script src="./assets/js/jquery-3.5.1.min.js"></script>
+        <script src="./assets/js/lists.js"></script>
+    </body>
+</html>
